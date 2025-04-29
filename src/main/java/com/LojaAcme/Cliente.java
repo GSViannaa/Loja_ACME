@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -26,6 +27,12 @@ public class Cliente
         LocalDate dataCompra = LocalDate.now();
 
         return new Pagamento(produto, dataCompra, this);
+    }
+
+    public Assinatura realizarAssinatura(BigDecimal mensalidade, Cliente cliente)
+    {
+        LocalDate inicio =  LocalDate.now();
+       return new Assinatura(mensalidade, inicio, this);
     }
 
 }

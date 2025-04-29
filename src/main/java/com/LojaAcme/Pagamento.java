@@ -20,7 +20,7 @@ public class Pagamento
     @Override
     public String toString()
     {
-        return "Pagamento{" + "produtos=" + produtos + ", dataCompra=" + dataCompra + ", cliente=" + cliente + '}';
+        return "Pagamento{" + "produtos=" + produtos + ", DataCompra=" + dataCompra + ", cliente=" + cliente + '}';
     }
 
 }

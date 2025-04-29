@@ -26,11 +26,20 @@ public class Assinatura
         this.cliente = cliente;
     }
 
-
     @Override
     public String toString()
     {
         return "Assinatura{" + "mensalidade=" + mensalidade + ", inicio=" + inicio + ", fim=" + fim + ", cliente=" + cliente + '}';
     }
+
+    public void encerrar(LocalDate dataFim)
+    {
+        if (this.fim != null)
+        {
+            throw new IllegalStateException("Assinatura já está encerrada.");
+        }
+        this.fim = dataFim;
+    }
+
 
 }
